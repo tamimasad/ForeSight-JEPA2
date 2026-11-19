@@ -1,0 +1,14 @@
+# torch + torchvision are needed to installed separately from the PyTorch CUDA index. 
+# python -m pip install --upgrade pip
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu132 (optimized for CUDA 13.2)
+transformers>=4.53
+accelerate
+av
+numpy
+pandas
+pyarrow
+scikit-learn
+matplotlib
+tqdm
+kaggle
+huggingface_hub
