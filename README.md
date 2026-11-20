@@ -37,9 +37,14 @@ ForeSight-JEPA2/
 ├── .vscode/
 │   └── settings.json      # keeps env, caches and temp files inside the project folder
 ├── src/
-│   ├── __init__.py
-│   └── check_env.py       # verifies packages, GPU and cache locations
-├── data/                  # HMDB51 videos and split lists (not tracked)
+│   ├── config.py          # paths, model name, observed fractions, harm classes
+│   ├── check_env.py       # verifies packages, GPU and cache locations
+│   ├── get_splits.py      # downloads and verifies the official split 1 lists
+│   ├── build_index.py     # builds data/index.csv (train / val / test, durations)
+│   ├── sample.py          # decodes a clip and samples frames from its observed part
+│   ├── vjepa.py           # frozen V-JEPA 2: tokens and SSv2 logits in one pass
+│   └── smoke_test.py      # correctness check and GPU timing
+├── data/                  # HMDB51 videos, split lists, index (not tracked)
 ├── features/              # cached encoder features (not tracked)
 ├── results/               # metrics tables and figures
 ├── requirements.txt
