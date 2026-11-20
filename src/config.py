@@ -22,6 +22,6 @@ VJEPA_REPO = "facebook/vjepa2-vitl-fpc16-256-ssv2"
 NUM_FRAMES = 16  # frames sampled from the observed part of a clip
 POOL_GRID = 4  # 16 x 16 patch grid pooled to 4 x 4 per time step
 
-# Observed fractions of each clip
-RATIOS = (0.3, 0.5, 0.7, 1.0)
-LEAD_TIME_RATIOS = (0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9)
+# Observed fractions of each clip (1.0 is the full clip, used as an upper bound)
+RATIOS = (0.5, 0.7, 1.0)
+LEAD_TIME_RATIOS = (0.5, 0.6, 0.7, 0.8, 0.9)

@@ -1,0 +1,170 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "torch": "2.15.0+cu132",
+  "transformers": "5.23.0",
+  "python": "3.12.16",
+  "model": "facebook/vjepa2-vitl-fpc16-256-ssv2",
+  "part_a": {
+    "tokens_shape": [
+      5,
+      2048,
+      1024
+    ],
+    "pooled_shape": [
+      5,
+      128,
+      1024
+    ],
+    "max_logit_diff": 0.0,
+    "same_top1": true,
+    "pass": true,
+    "examples": [
+      {
+        "clip": "BLACK_HAWK_DOWN_run_l_nm_np1_ba_med_33",
+        "label": "run",
+        "ssv2_top5": [
+          [
+            "Putting [something] onto [something]",
+            0.12054160237312317
+          ],
+          [
+            "Pushing [something] with [something]",
+            0.08204183727502823
+          ],
+          [
+            "Pushing [something] onto [something]",
+            0.06439537554979324
+          ],
+          [
+            "Squeezing [something]",
+            0.0609683133661747
+          ],
+          [
+            "Pushing [something] from right to left",
+            0.05932380259037018
+          ]
+        ]
+      },
+      {
+        "clip": "20_Marine_Corps_Pull_Ups_-_JimmyDShea_pullup_f_cm_np1_ba_bad_4",
+        "label": "pullup",
+        "ssv2_top5": [
+          [
+            "Moving [something] up",
+            0.3219427168369293
+          ],
+          [
+            "Moving [something] away from the camera",
+            0.1750372052192688
+          ],
+          [
+            "Showing [something] to the camera",
+            0.09780418127775192
+          ],
+          [
+            "Turning the camera downwards while filming [something]",
+            0.09479506313800812
+          ],
+          [
+            "Moving [something] down",
+            0.038151346147060394
+          ]
+        ]
+      },
+      {
+        "clip": "Swordplay_Alliance_Rapier_and_Dagger_fight_fencing_f_cm_np2_le_bad_5",
+        "label": "fencing",
+        "ssv2_top5": [
+          [
+            "Bending [something] until it breaks",
+            0.25855451822280884
+          ],
+          [
+            "Showing [something] behind [something]",
+            0.14390726387500763
+          ],
+          [
+            "Taking [one of many similar things on the table]",
+            0.12405581027269363
+          ],
+          [
+            "Moving [part] of [something]",
+            0.08492983132600784
+          ],
+          [
+            "Holding [something] in front of [something]",
+            0.03965062275528908
+          ]
+        ]
+      },
+      {
+        "clip": "Michelle_Wie__Golf_Swing_golf_f_cm_np1_fr_med_0",
+        "label": "golf",
+        "ssv2_top5": [
+          [
+            "Picking [something] up",
+            0.3876064419746399
+          ],
+          [
+            "Throwing [something]",
+            0.09242492914199829
+          ],
+          [
+            "Lifting [something] up completely without letting it drop down",
+            0.06528357416391373
+          ],
+          [
+            "Removing [something], revealing [something] behind",
+            0.054759956896305084
+          ],
+          [
+            "Moving [something] up",
+            0.04037746042013168
+          ]
+        ]
+      },
+      {
+        "clip": "Faith_Rewarded_swing_baseball_f_nm_np1_ba_bad_78",
+        "label": "swing_baseball",
+        "ssv2_top5": [
+          [
+            "Throwing [something]",
+            0.5949636697769165
+          ],
+          [
+            "Throwing [something] onto a surface",
+            0.2441725879907608
+          ],
+          [
+            "Throwing [something] against [something]",
+            0.06444705277681351
+          ],
+          [
+            "Throwing [something] in the air and letting it fall",
+            0.036151520907878876
+          ],
+          [
+            "Pretending or failing to wipe [something] off of [something]",
+            0.005352495238184929
+          ]
+        ]
+      }
+    ]
+  },
+  "part_b": {
+    "decode_s_per_clip": 0.02883967916667037,
+    "preprocess_s_per_pass": 0.012423962499977077,
+    "encode_s_per_pass": 0.10301107361114091,
+    "peak_gpu_gb": 0.871300220489502,
+    "passes": {
+      "features": 15300,
+      "lead_time": 630,
+      "masking": 2700
+    },
+    "hours": {
+      "features": 0.5314551156250344,
+      "lead_time": 0.02188344593750142,
+      "masking": 0.08897958368056103
+    }
+  }
+}
