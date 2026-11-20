@@ -11,4 +11,5 @@ scikit-learn
 matplotlib
 tqdm
 kaggle
+six
 huggingface_hub

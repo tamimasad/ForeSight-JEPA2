@@ -33,7 +33,7 @@ MANIFEST
 env/
 .cache/
 
-# secrets: never push your Kaggle token
+# Kaggle 
 .kaggle/
 
 # data and generated features (GBs)
