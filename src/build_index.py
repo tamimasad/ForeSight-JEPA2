@@ -123,6 +123,7 @@ def probe(path: Path) -> dict:
 
 
 def assign_val(df: pd.DataFrame) -> pd.DataFrame:
+    """Move about VAL_FRACTION of each class's training clips to validation, one source video at a time."""
     rng = random.Random(SEED)
     for _, grp in df[df.split == "train"].groupby("label"):
         by_source = defaultdict(list)
@@ -130,11 +131,13 @@ def assign_val(df: pd.DataFrame) -> pd.DataFrame:
             by_source[src].append(idx)
         sources = sorted(by_source)
         rng.shuffle(sources)
-        target, taken = VAL_FRACTION * len(grp), []
+        target = VAL_FRACTION * len(grp)
+        limit = 1.5 * target
+        taken = []
         for src in sources:
             if len(taken) >= target:
                 break
-            if len(taken) + len(by_source[src]) >= len(grp):
+            if len(taken) + len(by_source[src]) > limit:
                 continue
             taken += by_source[src]
         df.loc[taken, "split"] = "val"
