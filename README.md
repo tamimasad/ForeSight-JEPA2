@@ -43,7 +43,8 @@ ForeSight-JEPA2/
 │   ├── build_index.py     # builds data/index.csv (train / val / test, durations)
 │   ├── sample.py          # decodes a clip and samples frames from its observed part
 │   ├── vjepa.py           # frozen V-JEPA 2: tokens and SSv2 logits in one pass
-│   └── smoke_test.py      # correctness check and GPU timing
+│   ├── smoke_test.py      # correctness check and GPU timing
+│   └── extract_features.py  # encodes every clip once and saves V-JEPA 2 features to features/
 ├── data/                  # HMDB51 videos, split lists, index (not tracked)
 ├── features/              # cached encoder features (not tracked)
 ├── results/               # metrics tables and figures
